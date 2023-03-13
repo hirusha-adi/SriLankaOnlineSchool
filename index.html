@@ -4,18 +4,111 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <style>
+        .slos-nav-title {
+            margin-left: 2%;
+        }
+    </style>
 </head>
 
 <body>
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo slos-nav-title"> SLOC </a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Other
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-trigger" href="#" data-target="dropdown1">
+                        <i class="material-icons">menu</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><a href="#!">three</a></li>
+        <li>
+            <a href="#!"><i class="material-icons">view_module</i>four</a>
+        </li>
+        <li>
+            <a href="#!"><i class="material-icons">cloud</i>five</a>
+        </li>
+    </ul>
 
+    <ul class="sidenav" id="slide-out">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img
+                        src="https://images.unsplash.com/photo-1499623838158-29acea518eaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMHRyZWVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80" />
+                </div>
+                <a href="#user"><img class="circle" src="https://avatars.githubusercontent.com/u/36286877?v=4" /></a>
+                <a href="#name"><span class="white-text name">Made by Hirusha Adikari</span></a>
+                <a href="#email"><span class="white-text email">hirushaadi@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a href="https://www.hirusha.xyz/">About</a></li>
+        <li>
+            <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hirushaadi@gmail.com&su=Hello%20There%20%F0%9F%91%8B!&body=(%20REPLACE%20This%20text%20with%20your%20message%20)">
+                Contact
+            </a>
+        </li>
+        <li><a href="https://github.com/hirusha-adi">Other Projects</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Additional Information</a></li>
+        <li>
+            <a class="waves-effect" href="https://github.com/hirusha-adi/Edexcel-IGCSE/blob/main/CREDITS.md"><i
+                    class="material-icons">collections_bookmark</i>Credits</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="https://github.com/hirusha-adi/Edexcel-IGCSE/blob/main/LICENSE"><i
+                    class="material-icons">book</i>License</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="https://github.com/hirusha-adi/Edexcel-IGCSE/fork"><i
+                    class="material-icons">create</i>Contribute</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="https://github.com/hirusha-adi/Edexcel-IGCSE"><i
+                    class="material-icons">code</i>Source Code</a>
+        </li>
+    </ul>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(".sidenav").sidenav();
+        $(".tabs").tabs();
+        $(".dropdown-trigger").dropdown();
+        $(".collapsible").collapsible();
+
+
+    </script>
 </body>
 
 </html>
