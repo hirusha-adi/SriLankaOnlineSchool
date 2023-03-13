@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="dropdown-trigger" href="#" data-target="dropdown1">
+                    <a data-target="slide-out" onclick="openSideNavDesktop(this)">
                         <i class="material-icons">menu</i>
                     </a>
                 </li>
@@ -107,6 +107,11 @@
         $(".dropdown-trigger").dropdown();
         $(".collapsible").collapsible();
 
+        function openSideNavDesktop(element) {
+            var id = element.getAttribute('data-target');
+            var instance = M.Sidenav.getInstance(document.getElementById(id));
+            instance.open();
+        }
 
     </script>
 </body>
